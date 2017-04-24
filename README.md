@@ -1,1 +1,2 @@
-This is a fun calculator for a tutorial in AS1300.
+This is a test/trial website to learn about back-end database connectivity.
+
