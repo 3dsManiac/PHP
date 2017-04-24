@@ -2,23 +2,71 @@
 <html>
 <head>
 	<title>I can do it too</title>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+           html, body{
+                height:auto;
+              }
+            a {
+                max-width: 65%;
+            }
+            .btn:hover {
+                background-color: grey;
+                color: cyan;
+            }
+            #back {
+                 width: 100%;
+                 height: 100%;
+                 background: -webkit-linear-gradient(blue,#00004D) no-repeat;
+                 background-size: cover;
+            }
+            .width {
+                 width: 30%;
+            }
+            .container-fluid {
+                 max-width: 99%;
+             }
+         </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div class="container-fluid">
-		<div>
+      <div id="back">
+        <center><a href="https://3dsmaniac.github.io/home"><img id="img" style="max-width:25%;"src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/9e0b7c29820291.56052942306a1.gif" alt="img" border="0"></a><br/>
+           <h2 style="color:cyan;">Aero tutorial calculator</h2></center>
+       <div style="width:100%;">
+	<div class="page" style="width:50%;height:100%;text-align:center;margin:1% auto 20% auto;">
+		<div class="container-fluid" style="margin:auto;">
 			<form class="" method="post" action="script.php">
-				<div class="form-group">
-					<label for="name">Your Roll No.</label>
+				<div class="form-group shizz">
+					<label for="name" style="color: cyan">Your Roll No.</label>
 					<div style="height:auto;width:auto;">
-						<input type="text" class="form-control" name="roll" placeholder="Ex - ae16b031" required>
+						<input type="text" class="form-control col-sm-4" name="roll" placeholder="Ex - ae16b031" required>
 					</div>
 				</div>
-				<div class="form-group">
-					<input type="submit" class="form-control" name="btn" value="Calculate!">
+				<div class="form-group submit">
+					<input type="submit" class="form-control btn" name="btn" value="Calculate!">
 				</div>
 			</form>
 		</div>
 	</div>
+      </div>
+    </div>
+<script>
+ $(document).ready( function() {
+        if($(window).width()>700 )
+         {
+            $('div.page').css('max-width','25%');
+            $('.submit').css('max-width','60%');
+            $('.submit').css('margin','auto');
+            $('.shizz').append("<br/><br>");
+          }
+         else
+           $('#img').css("max-width","75%");
+  });
+</script>
 </body>
 </html>
